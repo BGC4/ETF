@@ -24,7 +24,7 @@
 
     #qrCode {
         width: 225px;
-        height: 225px; 
+        height: 225px;
         margin-top: 20px;
         margin-bottom: 20px;
         border-radius: 15px;
@@ -36,6 +36,7 @@
       padding: 10px;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+      margin-top: 10px;
       margin-bottom: 10px;
       text-align: center;
     }
@@ -83,7 +84,7 @@
   </div>
   <script>
 
-    const isMobile = /Android|webOS|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
     if (isMobile) {
         // Si es un dispositivo móvil, mostrar un enlace de descarga
@@ -101,7 +102,3 @@
   </script>
 </body>
 </html>
-
-
-
-
