@@ -73,15 +73,15 @@
   </style>
 </head>
 <body>
-  <h1>Descargar RegistrAPP</h1>
-  <div id="infoBox">
-    <p class="top">Escanea el código para descargar la aplicación en tu dispositivo móvil</p>
-  </div>
-  <img id="qrCode" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" alt="Escanea el código QR para descargar la APK">
-  <div id="appInfoBox">
-    <p class="titulo"><b><strong>Información de la aplicación:</strong></b></p>
-    <p class="info">Esta aplicación te permite registrar tu asistencia de una manera más fácil y sencilla. Solo con escanear el QR dentro de la aplicación, ya podrás estar registrado como presente.</p>
-  </div>
+    <h1>Descargar RegistrAPP</h1>
+    <div id="infoBox">
+        <p class="top">Escanea el código para descargar la aplicación en tu dispositivo móvil</p>
+    </div>
+    <img id="qrCode" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" alt="Escanea el código QR para descargar la APK">
+    <div id="appInfoBox">
+        <p class="titulo"><b><strong>Información de la aplicación:</strong></b></p>
+        <p class="info">Esta aplicación te permite registrar tu asistencia de una manera más fácil y sencilla. Solo con escanear el QR dentro de la aplicación, ya podrás estar registrado como presente.</p>
+    </div>
   <script>
 
     const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
@@ -96,8 +96,8 @@
 
     } else {
       // Si es un ordenador, mostrar un QR que redirige a la misma página en el móvil
-        const qrCode = document.getElementById('qrCode');
-        qrCode.src = 'https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://download1530.mediafire.com/7omd1i9dc5zgBXYM0G6clGschvL1hSReDUJx4CviU1Bp4jDdSJQp-dy3lmcLduAo8dirmlr6nw3T9p_PU8a2yrtjcYbxJspZhniz5xnhxnJUQe75_-qkEd2t8--UP40MPzTW0mr9LSXZRCW4EIaQgRvK-ml-z7Kcjup7IinVe8-R/ykji6r9o648mhcy/app-debug.apk'; // Reemplaza 'URL_DE_TU_PAGINA' con la URL real de tu página
+        const qrCode = document.getElementById('qrCode');  
+        qrCode.src = 'https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://download1530.mediafire.com/7omd1i9dc5zgBXYM0G6clGschvL1hSReDUJx4CviU1Bp4jDdSJQp-dy3lmcLduAo8dirmlr6nw3T9p_PU8a2yrtjcYbxJspZhniz5xnhxnJUQe75_-qkEd2t8--UP40MPzTW0mr9LSXZRCW4EIaQgRvK-ml-z7Kcjup7IinVe8-R/ykji6r9o648mhcy/app-debug.apk';
     }
   </script>
 </body>
