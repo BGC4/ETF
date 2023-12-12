@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Descargar APK</title>
+  <style>
+    body {
+        background-color: #121212;
+        color: #ffffff;
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 36px; /* Ajusta el tamaño según tus preferencias */
+        margin: 0;
+    }
+
+    #qrCode {
+        width: 225px; /* Ajusta el tamaño según tus necesidades (150px + 50%) */
+        height: 225px; /* Ajusta el tamaño según tus necesidades (150px + 50%) */
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border-radius: 15px; /* Bordes redondeados */
+    }
+
+    #infoBox, #appInfoBox {
+      background: linear-gradient(45deg, #006400, #008080); /* Degradado de color */
+      color: #ffffff; /* Texto blanco */
+      padding: 10px;
+      border-radius: 10px; /* Bordes redondeados */
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* Sombreado */
+      margin-top: 10px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .top {
+        font-size: 20px; /* Fuente en un 100% */
+        padding: 2%;
+        margin: 0;
+        text-align: center;
+    }
+
+    strong {
+        text-decoration: underline;
+        font-weight: bold;
+    }
+
+    p{
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .info{
+        font-size: 20px; /* Fuente en un 100% */
+        padding: 1%;
+        margin: 0;
+        text-align: center;
+    }
+
+    .titulo{
+        font-size: 25px; /* Fuente en un 100% */
+        padding: 1%;
+        margin: 0;
+        text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Descargar RegistrAPP</h1>
+  <div id="infoBox">
+    <p class="top">Escanea el código para descargar la aplicación en tu dispositivo móvilllllllll</p>
+  </div>
+  <img id="qrCode" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" alt="Escanea el código QR para descargar la APK">
+  <div id="appInfoBox">
+    <p class="titulo"><b><strong>Información de la aplicación:</strong></b></p>
+    <p class="info">Esta aplicación te permite registrar tu asistencia de una manera más fácil y sencilla. Solo con escanear el QR dentro de la aplicación, ya podrás estar registrado como presente.</p>
+  </div>
+  <script>
+
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+    if (isMobile) {
+        // Si es un dispositivo móvil, mostrar un enlace de descarga
+        const apkLink = document.createElement('a');
+        apkLink.href = 'https://download1530.mediafire.com/7omd1i9dc5zgBXYM0G6clGschvL1hSReDUJx4CviU1Bp4jDdSJQp-dy3lmcLduAo8dirmlr6nw3T9p_PU8a2yrtjcYbxJspZhniz5xnhxnJUQe75_-qkEd2t8--UP40MPzTW0mr9LSXZRCW4EIaQgRvK-ml-z7Kcjup7IinVe8-R/ykji6r9o648mhcy/app-debug.apk';
+        apkLink.textContent = 'Descargar APK';
+        apkLink.setAttribute('download', 'app-debug.apk');
+        document.body.appendChild(apkLink);
+
+    } else {
+      // Si es un ordenador, mostrar un QR que redirige a la misma página en el móvil
+        const qrCode = document.getElementById('qrCode');
+        qrCode.src = 'https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://download1530.mediafire.com/7omd1i9dc5zgBXYM0G6clGschvL1hSReDUJx4CviU1Bp4jDdSJQp-dy3lmcLduAo8dirmlr6nw3T9p_PU8a2yrtjcYbxJspZhniz5xnhxnJUQe75_-qkEd2t8--UP40MPzTW0mr9LSXZRCW4EIaQgRvK-ml-z7Kcjup7IinVe8-R/ykji6r9o648mhcy/app-debug.apk'; // Reemplaza 'URL_DE_TU_PAGINA' con la URL real de tu página
+    }
+  </script>
+</body>
+</html>
+
+
+
+
