@@ -88,10 +88,10 @@
 <body>
   <script>
 
-    const isMobile = /Android|iPhone|iPad|iPod|/i.test(navigator.userAgent);
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 
     if (isMobile) {
-        // Si es un dispositivo móvil, mostrar un botón de descarga
+        // Si es un dispositivo móvil, mostrar un enlace de descarga
         const apkLink = document.createElement('a');
         document.body.innerHTML = `
         <h1>Descargar RegistrAPP</h1>
