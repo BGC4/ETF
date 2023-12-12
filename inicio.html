@@ -31,14 +31,27 @@
     }
 
     #infoBox, #appInfoBox {
-      background: linear-gradient(45deg, #006400, #008080);
-      color: #ffffff;
-      padding: 10px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-      margin-top: 10px;
-      margin-bottom: 10px;
-      text-align: center;
+        background: linear-gradient(45deg, #006400, #008080);
+        color: #ffffff;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        margin-top: 10px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    #descargar {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 15px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin-top: 10px;
+        cursor: pointer;
     }
 
     .top {
@@ -75,25 +88,27 @@
 <body>
   <script>
 
-    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const isMobile = /Android|iPhone|iPad|iPod|/i.test(navigator.userAgent);
 
     if (isMobile) {
-        // Si es un dispositivo móvil, mostrar un enlace de descarga
+        // Si es un dispositivo móvil, mostrar un botón de descarga
         const apkLink = document.createElement('a');
-        apkLink.href = 'https://download1530.mediafire.com/7omd1i9dc5zgBXYM0G6clGschvL1hSReDUJx4CviU1Bp4jDdSJQp-dy3lmcLduAo8dirmlr6nw3T9p_PU8a2yrtjcYbxJspZhniz5xnhxnJUQe75_-qkEd2t8--UP40MPzTW0mr9LSXZRCW4EIaQgRvK-ml-z7Kcjup7IinVe8-R/ykji6r9o648mhcy/app-debug.apk';
-        apkLink.textContent = 'Descargar APK';
-        apkLink.setAttribute('download', 'app-debug.apk');
-        document.body.appendChild(apkLink);
+        document.body.innerHTML = `
+        <h1>Descargar RegistrAPP</h1>
+        <div id="infoBox">
+          <p class="top">Haz click en el botón para descargar el APK.</p>
+        </div>
+        <a id="descargar" href="https://bgc4.github.io/ETF/inicio.html" target="_self">Descargar APK</a>`;
 
     } else {
-      // Si es un ordenador, mostrar un QR que redirige a la misma página en el móvil
+      // Si es un ord a la misma página en el móvil
         const qrCode = document.getElementById('qrCode');
         document.body.innerHTML = `
         <h1>Descargar RegistrAPP</h1>
         <div id="infoBox">
-          <p class="top">Escanea el código para descargar la aplicación en tu dispositivo móvil</p>
+          <p class="top">Escanea el código para descargar la aplicación desde tu dispositivo móvil</p>
         </div>
-        <img id="qrCode" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://download1530.mediafire.com/7omd1i9dc5zgBXYM0G6clGschvL1hSReDUJx4CviU1Bp4jDdSJQp-dy3lmcLduAo8dirmlr6nw3T9p_PU8a2yrtjcYbxJspZhniz5xnhxnJUQe75_-qkEd2t8--UP40MPzTW0mr9LSXZRCW4EIaQgRvK-ml-z7Kcjup7IinVe8-R/ykji6r9o648mhcy/app-debug.apk" alt="Escanea el código QR para descargar la APK">
+        <img id="qrCode" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://bgc4.github.io/ETF/inicio.html">
         <div id="appInfoBox">
           <p class="titulo"><b><strong>Información de la aplicación:</strong></b></p>
           <p class="info">Esta aplicación te permite registrar tu asistencia de una manera más fácil y sencilla. Solo con escanear el QR dentro de la aplicación, ya podrás estar registrado como presente.</p>
