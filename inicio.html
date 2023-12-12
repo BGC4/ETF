@@ -22,7 +22,7 @@
         margin: 0;
     }
 
-    #qrCode {
+    #codigoQR {
         width: 225px;
         height: 225px;
         margin-top: 20px;
@@ -30,7 +30,7 @@
         border-radius: 15px;
     }
 
-    #infoBox, #appInfoBox {
+    #descargarApk, #infoApp {
         background: linear-gradient(45deg, #006400, #008080);
         color: #ffffff;
         padding: 10px;
@@ -66,18 +66,18 @@
         font-weight: bold;
     }
 
-    p{
+    p {
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
 
-    .info{
+    .info {
         font-size: 20px;
         padding: 1%;
         margin: 0;
         text-align: center;
     }
 
-    .titulo{
+    .titulo {
         font-size: 25px;
         padding: 1%;
         margin: 0;
@@ -94,26 +94,26 @@
         // Si es un dispositivo móvil, mostrar un enlace de descarga
         const apkLink = document.createElement('a');
         document.body.innerHTML = `
-        <h1>Descargar RegistrAPP</h1>
-        <div id="infoBox">
+        <h1<b><strong>Descargar RegistrAPP</strong></b>/h1>
+        <div id="descargarApk">
           <p class="top">Haz click en el botón para descargar el APK.</p>
         </div>
-        <a id="descargar" href="https://bgc4.github.io/ETF/inicio.html" target="_self">Descargar APK</a>`;
+        <a id="descargar" href="https://github.com/BGC4/ETF/releases/download/ET/app-debug.apk" target="_self">Descargar APK</a>`;
 
     } else {
-      // Si es un ord a la misma página en el móvil
-        const qrCode = document.getElementById('qrCode');
+      // Si es un ordenador, redirige a la misma página en el móvil
+        const codigoQR = document.getElementById('codigoQR');
         document.body.innerHTML = `
-        <h1>Descargar RegistrAPP</h1>
-        <div id="infoBox">
-          <p class="top">Escanea el código para descargar la aplicación desde tu dispositivo móvil</p>
+        <h1><b><strong>Descargar RegistrAPP</strong></b></h1>
+        <div id="descargarApk">
+          <p class="top">Escanea el código para descargar la aplicación desde tu dispositivo móvil.</p>
         </div>
-        <img id="qrCode" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://bgc4.github.io/ETF/inicio.html">
-        <div id="appInfoBox">
+        <img id="codigoQR" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://bgc4.github.io/ETF/inicio.html">
+        <div id="infoApp">
           <p class="titulo"><b><strong>Información de la aplicación:</strong></b></p>
           <p class="info">Esta aplicación te permite registrar tu asistencia de una manera más fácil y sencilla. Solo con escanear el QR dentro de la aplicación, ya podrás estar registrado como presente.</p>
         </div>`
-        qrCode.src = 'https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://download1530.mediafire.com/7omd1i9dc5zgBXYM0G6clGschvL1hSReDUJx4CviU1Bp4jDdSJQp-dy3lmcLduAo8dirmlr6nw3T9p_PU8a2yrtjcYbxJspZhniz5xnhxnJUQe75_-qkEd2t8--UP40MPzTW0mr9LSXZRCW4EIaQgRvK-ml-z7Kcjup7IinVe8-R/ykji6r9o648mhcy/app-debug.apk'; // Reemplaza 'URL_DE_TU_PAGINA' con la URL real de tu página
+        codigoQR.src = 'https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://bgc4.github.io/ETF/inicio.html';
     }
   </script>
 </body>
