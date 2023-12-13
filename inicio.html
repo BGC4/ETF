@@ -9,13 +9,14 @@
         background-color: #121212;
         color: #ffffff;
         font-family: Arial;
-        display: flex;
+        display: fixed;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         height: 100vh;
         margin: 0;
         text-align: center;
+        margin-top: auto;
     }
 
     h1 {
@@ -25,7 +26,6 @@
         padding: 50px;
         width: 100%;
         margin: 0;
-        position: fixed;
         top: 0;
     }
 
@@ -56,6 +56,9 @@
         margin-top: 15px;
         margin-bottom: 15px;
         border-radius: 15px;
+        display: block;
+        text-align: center;
+        margin: 10px auto;
     }
 
     #descargarApk, #infoApp {
@@ -67,6 +70,7 @@
         margin-top: 10px;
         margin-bottom: 10px;
         text-align: center;
+        display: inline-block;
     }
 
     #descargar {
@@ -80,7 +84,6 @@
         font-size: 16px;
         margin-top: 30px;
         margin-bottom: 30px;
-        cursor: pointer;
     }
 
     .top {
@@ -120,8 +123,8 @@
     const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 
     if (isMobile) {
-        // Si es un dispositivo móvil, mostrar un enlace de descarga
-        const apkLink = document.createElement('a');
+        // Si es un dispositivo móvil, mostrar un botón de descarga
+        const apkLink = document.createElement('apkLink');
         document.body.innerHTML = `
         <h2><b><strong>Descargar RegistrAPP</strong></b></h2>
         <div id="descargarApk">
@@ -135,7 +138,7 @@
         <footer></footer>`;
 
     } else {
-      // Si es un ordenador, redirige a la misma página en el móvil
+      // Si es un ordenador, se escanea el QR para descargar instantaneamente en el dispositivo móvil
         const codigoQR = document.getElementById('codigoQR');
         document.body.innerHTML = `
         <h1><b><strong>Descargar RegistrAPP</strong></b></h1>
@@ -148,6 +151,7 @@
           <p class="info">Esta aplicación te permite registrar tu asistencia de una manera más fácil y sencilla. Solo con escanear el QR dentro de la aplicación, ya podrás estar registrado como presente. Además, podrás ver tu información dentro de la aplicación. Solo necesitas registrarte para poder acceder a las funciones.</p>
         </div>
         <footer></footer>`
+        
         codigoQR.src = 'https://api.qrserver.com/v1/create-qr-code/?data=https://bgc4.github.io/ETF/inicio.html';
     }
   </script>
