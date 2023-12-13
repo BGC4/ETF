@@ -116,7 +116,17 @@
     }
 
     #movil{
-        
+        background-color: #121212;
+        color: #ffffff;
+        font-family: Arial;
+        display: fixed;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        text-align: center;
+        margin-top: auto;
     }
   </style>
 </head>
@@ -130,15 +140,15 @@
         const apkLink = document.createElement('apkLink');
         document.body.innerHTML = `
         <div id="movil">
-        <h2><b><strong>Descargar RegistrAPP</strong></b></h2>
-        <div id="descargarApk">
-          <p class="top">Haz click en el botón para descargar el APK.</p>
-        </div>
-        <a id="descargar" href="https://github.com/BGC4/ETF/releases/download/ET/app-debug.apk" target="_self">Descargar APK</a>
-        <div id="infoApp">
-          <p class="titulo"><b><strong>Información de la aplicación:</strong></b></p>
-          <p class="info">Esta aplicación te permite registrar tu asistencia de una manera más fácil y sencilla. Solo con escanear el QR dentro de la aplicación, ya podrás estar registrado como presente. Además, podrás ver tu información dentro de la aplicación. Solo necesitas registrarte para poder acceder a las funciones.</p>
-        </div>
+          <h2><b><strong>Descargar RegistrAPP</strong></b></h2>
+          <div id="descargarApk">
+            <p class="top">Haz click en el botón para descargar el APK.</p>
+          </div>
+          <a id="descargar" href="https://github.com/BGC4/ETF/releases/download/ET/app-debug.apk" target="_self">Descargar APK</a>
+          <div id="infoApp">
+            <p class="titulo"><b><strong>Información de la aplicación:</strong></b></p>
+            <p class="info">Esta aplicación te permite registrar tu asistencia de una manera más fácil y sencilla. Solo con escanear el QR dentro de la aplicación, ya podrás estar registrado como presente. Además, podrás ver tu información dentro de la aplicación. Solo necesitas registrarte para poder acceder a las funciones.</p>
+          </div>
         </div>
         <footer></footer>`;
 
