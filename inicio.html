@@ -114,6 +114,10 @@
         margin: 0;
         text-align: center;
     }
+
+    #movil{
+        
+    }
   </style>
 </head>
 <body>
@@ -125,6 +129,7 @@
         // Si es un dispositivo móvil, mostrar un botón de descarga
         const apkLink = document.createElement('apkLink');
         document.body.innerHTML = `
+        <div id="movil">
         <h2><b><strong>Descargar RegistrAPP</strong></b></h2>
         <div id="descargarApk">
           <p class="top">Haz click en el botón para descargar el APK.</p>
@@ -133,6 +138,7 @@
         <div id="infoApp">
           <p class="titulo"><b><strong>Información de la aplicación:</strong></b></p>
           <p class="info">Esta aplicación te permite registrar tu asistencia de una manera más fácil y sencilla. Solo con escanear el QR dentro de la aplicación, ya podrás estar registrado como presente. Además, podrás ver tu información dentro de la aplicación. Solo necesitas registrarte para poder acceder a las funciones.</p>
+        </div>
         </div>
         <footer></footer>`;
 
